@@ -13,7 +13,6 @@ public class BrowserHooks extends BaseDriver {
 
     @After()
     public void closingTheBrowser(){
-
-        //driver.quit();
+        driver.quit();
     }
 }

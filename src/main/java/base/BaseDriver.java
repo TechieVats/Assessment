@@ -49,7 +49,6 @@ public class BaseDriver {
     }
 
     public void navigateToUrl(){
-        System.out.println("URL"+property.getProperty("DEMO_URL") );
         driver.get(property.getProperty("DEMO_URL"));
     }
 }

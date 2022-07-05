@@ -16,4 +16,9 @@ public class ClientAction {
         client.clickOnMenuTab();
         client.selectPayeeOption();
     }
+
+    public void navigatingToPaymentTransferPage(){
+        client.clickOnMenuTab();
+        client.SelectPaymentTransfer();
+    }
 }

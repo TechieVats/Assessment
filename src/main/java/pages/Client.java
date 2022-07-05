@@ -17,6 +17,9 @@ public class Client extends BaseDriver {
     @FindBy(css = "[href='/client/payees']")
     private WebElement menuPayee;
 
+    @FindBy(xpath = "//li[contains(@class,'paytransfer')]")
+    private WebElement paymentTransfer;
+
     public void clickOnMenuTab(){
         menuButton.click();
     }
@@ -24,5 +27,7 @@ public class Client extends BaseDriver {
     public void selectPayeeOption(){
         menuPayee.click();
     }
+
+    public void SelectPaymentTransfer(){paymentTransfer.click();}
 
 }
