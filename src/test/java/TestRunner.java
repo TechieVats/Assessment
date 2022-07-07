@@ -7,7 +7,8 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/",
         glue = {"hooks","stepdefinition"},
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
-        monochrome = true
+        monochrome = true,
+        tags = "@API"
 )
 public class TestRunner {
 }

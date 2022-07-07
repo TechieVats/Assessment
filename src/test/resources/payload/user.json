@@ -1,0 +1,23 @@
+{
+  "id": 11,
+  "name": "Abhishek Vats",
+  "username": "Abhishek",
+  "email": "abhi_vats@vats.io",
+  "address": {
+    "street": "bree street",
+    "suite": "Suite 26",
+    "city": "Cape Town",
+    "zipcode": "8005",
+    "geo": {
+      "lat": "24.6463",
+      "lng": "-168.8889"
+    }
+  },
+  "phone": "(775)976-6794 x41206",
+  "website": "success.com",
+  "company": {
+    "name": "Vats and Sons",
+    "catchPhrase": "Switchable contextually-based project",
+    "bs": "aggregate real-time technologies"
+  }
+}

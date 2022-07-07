@@ -41,14 +41,15 @@ public class BaseDriver {
             break;
         }
         }
+
+    }
+
+    public void navigateToUrl(){
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(TestingUtility.PAGE_LOAD_TIMEOUT));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TestingUtility.IMPLICIT_WAIT));
         wait = new WebDriverWait(driver, Duration.ofSeconds(TestingUtility.WEB_DRIVER_WAIT));
-    }
-
-    public void navigateToUrl(){
         driver.get(property.getProperty("DEMO_URL"));
     }
 }

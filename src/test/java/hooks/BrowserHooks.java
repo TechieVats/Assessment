@@ -8,11 +8,12 @@ public class BrowserHooks extends BaseDriver {
 
     @Before()
     public void launchingTheBrowser(){
-        creatingTheSession();
+
+       // creatingTheSession();
     }
 
     @After()
     public void closingTheBrowser(){
-        driver.quit();
+        //driver.quit();
     }
 }
