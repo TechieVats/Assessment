@@ -1,7 +1,6 @@
 @UI @success
 Feature: To automate the BNZ client scenarios
 
-  @BNZ
   Scenario: To verify the user can navigate to Payees page using the navigation menu in BNZ
     Given user is on BNZ client page
     When the user clicks on the Menu tab and selects the Payees option

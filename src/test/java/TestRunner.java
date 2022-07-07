@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
         glue = {"hooks","stepdefinition"},
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         monochrome = true,
-        tags = "@BNZ"
+        tags = "@API"
 )
 public class TestRunner {
 }
