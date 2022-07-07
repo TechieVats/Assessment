@@ -19,7 +19,7 @@ public class APIAction {
     JSONParser jsonParser = new JSONParser();
     FileReader fr;
     Object obj;
-    private static final String PAYLOAD_PATH = System.getProperty("user.dir") + "\\src\\test\\resources\\payload\\user.json";
+    private static final String PAYLOAD_PATH = System.getProperty("user.dir") + "/src/test/resources/payload/user.json";
 
     public void fetchingTheUserDetails(String endpoint) {
         apiUtility.setBaseURI();
