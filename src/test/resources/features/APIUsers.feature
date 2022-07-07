@@ -1,4 +1,4 @@
-@API
+@API @success
 Feature: To test the functionality of jsonplaceholder users api's
 
   Scenario: To verify the get request for users returning valid response

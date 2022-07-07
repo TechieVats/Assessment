@@ -13,8 +13,8 @@ public class BnzClient {
     PayeeAction user = new PayeeAction();
     PaymentAction userPay = new PaymentAction();
 
-    @Given("user is on BNX client page")
-    public void user_is_on_bnx_client_page() {
+    @Given("user is on BNZ client page")
+    public void userIsOnBnzClientPage() {
         userIs.navigateToBnzClient();
     }
 
