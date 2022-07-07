@@ -25,14 +25,14 @@ Feature: To automate the BNZ client scenarios
     Then the error messages are no longer present
 
 
-  Scenario: To verify that pages can be sorted by name
+  Scenario: To verify that pages can be sorted by name in BNZ
     Given user is on BNZ client page
     When the user clicks on the Menu tab and selects the Payees option
     Then the user is able to verify the payee list in ascending order
     When the user clicks on the name header
     Then the user is able to verify that the payee list is sorted in descending order
 
-  Scenario: To verify that user is able to make payment transfer
+  Scenario: To verify that user is able to make payment transfer in BNZ
     Given user is on BNZ client page
     And the user navigates to the payment transfer page
     When user transfer $500 from Everyday Account to Bills Account

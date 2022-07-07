@@ -2,6 +2,8 @@ package pages;
 
 import base.BaseDriver;
 import config.Configuration;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class Payment extends BaseDriver {
     Configuration config = new Configuration();
+    private static Logger Log = LogManager.getLogger(Payment.class.getName());
 
     public Payment() {
         PageFactory.initElements(driver, this);
@@ -40,22 +43,30 @@ public class Payment extends BaseDriver {
 
     public void selectFromEveryDayAccount() {
         fromAccount.click();
+        Log.info("user click on from account option");
         fromAccountSearch.sendKeys(config.getCustomProperty("ACCOUNT_TYPE"));
+        Log.info("user searching the account");
         try {
             wait.until(ExpectedConditions.elementToBeClickable(fromAccountEveryday)).click();
+            Log.info("user clicks on from everyday account");
         } catch (ElementClickInterceptedException e) {
             fromAccountEveryday.click();
+            Log.info("user clicks on from everyday account");
         }
     }
 
     public void selectToBillsAccount() {
         toAccountOptions.click();
+        Log.info("user clicks on account options");
         try {
             wait.until(ExpectedConditions.elementToBeClickable(toAccountTab)).click();
+            Log.info("user clicks on account tab");
         } catch (ElementClickInterceptedException e) {
             toAccountTab.click();
+            Log.info("user clicks on account tab");
         }
         toAccountBills.click();
+        Log.info("user selects on to account bill");
     }
 
     public Double fromAccountBalance() {
@@ -70,10 +81,12 @@ public class Payment extends BaseDriver {
 
     public void setTransferAmount(String amount) {
         this.amount.sendKeys(amount);
+        Log.info("user entered the amount: " + amount);
     }
 
     public void transferTheMoney() {
         transferBtn.click();
+        Log.info("user clicks on transfer button");
     }
 
     public String getSuccessfulTransferAlert() {

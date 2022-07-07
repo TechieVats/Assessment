@@ -1,6 +1,8 @@
 package pages;
 
 import base.BaseDriver;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,7 +16,7 @@ import java.util.stream.Collectors;
 public class Payee extends BaseDriver {
 
     List<String> list = new ArrayList<>();
-
+    private static Logger Log = LogManager.getLogger(Payee.class.getName());
     public Payee() {
         PageFactory.initElements(driver, this);
     }
@@ -54,11 +56,13 @@ public class Payee extends BaseDriver {
 
     public void clickOnAddANewPayee() {
         wait.until(ExpectedConditions.elementToBeClickable(addPayeeBtn)).click();
+        Log.info("user is clicking on add button");
     }
 
     public void setPayeeName(String payeeName) {
         this.payeeName.sendKeys(payeeName);
         wait.until(ExpectedConditions.elementToBeClickable(payeeNameHover)).click();
+        Log.info("user set the payee name: "+ payeeName);
     }
 
     public void setEmptyPayee() {
@@ -66,31 +70,40 @@ public class Payee extends BaseDriver {
             addPayeeBtn.click();
         } catch (ElementClickInterceptedException e) {
             payeeName.sendKeys("");
+            Log.info("user set an empty name");
             addToPayeeList.click();
+            Log.info("user is clicking on add button");
         }
         payeeName.sendKeys("");
+        Log.info("user set an empty name");
         addToPayeeList.click();
+        Log.info("user is clicking on add button");
 
     }
 
     public void setBankCode(String bankCode) {
         this.bankCode.sendKeys(bankCode);
+        Log.info("user set bank code: "+ bankCode);
     }
 
     public void setBranchCode(String branchCode) {
         this.branceCode.sendKeys(branchCode);
+        Log.info("user set branchCode: "+ branchCode);
     }
 
     public void setAccountNumber(String accountNumber) {
         this.accountNumber.sendKeys(accountNumber);
+        Log.info("user set accountNumber: "+ accountNumber);
     }
 
     public void setSuffixDetails(String suffixDetails) {
         this.suffixDetails.sendKeys(suffixDetails);
+        Log.info("user set suffixDetails: "+ suffixDetails);
     }
 
     public void addPayeeToList() {
         wait.until(ExpectedConditions.elementToBeClickable(addToPayeeList)).click();
+        Log.info("user added the payee");
     }
 
     public String getPayeeAddConfirmationMsg() {

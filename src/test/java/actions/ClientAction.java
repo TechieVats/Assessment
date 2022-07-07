@@ -1,7 +1,10 @@
 package actions;
 
 import base.BaseDriver;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import pages.Client;
+import util.APIUtility;
 
 public class ClientAction {
 
