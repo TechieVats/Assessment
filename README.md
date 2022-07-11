@@ -15,7 +15,7 @@ Assessment for DATACOM
 
 1. BNZ UI Automation
    Test scenarios has been mentioned in the feature file named Bnz.feature,
-   implementation for the same in available in WeatherAPI: src/test/java/stepdefinition/BnzClient.java
+   implementation for the same is available in: src/test/java/stepdefinition/BnzClient.java
    path for feature file : src/test/resources/features/Bnz.feature
    Browser independent- It can work on any browser- currently working functionality has been coded.
    How to change browser? - Go to Environment.properties files -> Browser=Chrome.
