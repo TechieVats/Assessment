@@ -26,7 +26,7 @@ Assessment for DATACOM
 
 2 . JsonPlaceHolder API Automation
 Test scenarios has been mentioned in the feature file named APIUsers.feature,
-implementation for the same in available in WeatherAPI: src/test/java/StepDefinitions/APIUser.java
+Implementation for the same in available in : src/test/java/StepDefinitions/APIUser.java
 path for feature file : src/test/resources/features/APIUsers.feature
 
 
