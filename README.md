@@ -53,7 +53,7 @@ named meaningfully to avoid unnecessary comments within the code.
 log4j2 has been used to perform logging in the framework to showcase the flow the tests which are running.
 
 ## Report
-report for test execution has been present in report directory under the name GlobalKinetic.html.
+report for test execution has been present in report directory under the name Execution.html.
 
 ## Configuration
 This directory has been created to declare variables globally
